@@ -73,12 +73,17 @@ h3 {
 }
 
 .button {
-    background-image: linear-gradient(to right, rgb(151, 151, 151) , rgb(207, 207, 207));
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: 400;
     text-decoration: none;
     color: #000;
+    transition: background-image 3s ease;
+    background-image: linear-gradient(to right, #979797 , #e8e8e8);
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #cecece , #ffffff);
 }
 
 .button::after {
@@ -150,12 +155,12 @@ h3 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    min-width: 300px;
 }
 
 .information .box {
     width: 33%;
-    padding: 0 20px;
+    padding: 20px 20px;
+    min-width: 300px;
 }
 
 .information .box img {
@@ -172,16 +177,17 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
+    
     margin-top: 100px;
 }
 
 .m-box {
     width: 45%;
     padding: 0 5px;
+    min-width: 300px;
 }
 
-.right {
+.modern .right {
     max-width: 400px;
     padding-left: 50px;
     border-left: 1px solid #232323;
@@ -196,13 +202,13 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 200px;
     margin-top: 100px;
 }
 
 .w-box { 
     width: 16%;
-    padding: 0 10px;
+    padding: 20px 10px;
+    min-width: 200px;
 }
 
 
@@ -210,8 +216,7 @@ h3 {
 
 .heading {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin: 50px 0px;
     padding: 0 30px;
@@ -219,16 +224,18 @@ h3 {
     border-bottom: 1px solid #272727;
 }
 
+/* products section */
+
 .products {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 50px 100px;
+    padding: 50px 50px;
 }
 
 .card {
     min-width: 200px;
-    width: 30%;
+    width: 33%;
     padding: 0 20px;
 
 }
@@ -256,6 +263,10 @@ h3 {
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 100px 0;
+}
+.news .ncard {
+
+    min-width: 250px;
 }
 
 .news .n-card1 {
@@ -337,13 +348,20 @@ h3 {
 /*  Feedback section */
 
 .feedback {
+    margin: 0;
     display: flex;
-    flex-flow: row-reverse wrap;
-
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
 }
 
 .feedback .feedback-box {
     width: 45%;
+    min-width: 300px;
+}
+
+.feedback .f-two {
+    margin: auto;
 }
 
 .feedback img {
@@ -353,3 +371,183 @@ h3 {
     opacity: 0.8;
 }
 
+.feedback .feedback-box .quote {
+    background-color: #222222;
+    padding: 30px;
+    width: 40%;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -500px;
+}
+
+
+/* keypoint section */
+
+.keypoint {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.keypoint img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.keypoint .k-box {
+    width: 50%;
+    max-height: 500px;
+    min-width: 300px;
+}
+
+.keypoint .k-one {
+    margin: auto;
+    width: 35%;
+}
+
+.keypoint .k-two {
+    width: 60%;
+}
+
+
+/* Footer section */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10px;
+}
+
+footer .f-box {
+    width: 24%;
+    min-width: 200px;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+@media screen and (max-width:800px) {
+    .navbar a {display: none;}
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .navmid {
+        display: inline-block;
+    }
+    
+}
+
+@media screen and (max-width:600px) and (min-width:800px) {
+    .navbar a {display: none;}
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .navmid {
+        display: inline-block;
+    }
+
+
+
+    .information .box {width: 90%;}
+    
+    
+    .w-box {
+        width: 90%;
+        text-align: center;
+    }
+    
+
+    .heading {justify-content: center;}
+    .heading h1 {
+        font-size: 2rem;
+    }
+    
+    
+    
+    .products {padding: 0 10px;}
+    .card {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .news .n-card1, .news .n-card2 {width: auto;}
+    /* .news .n-card2 {
+        width: auto;
+    } */
+
+    .feedback .feedback-box {
+        width: 100%;
+    }
+    .feedback .feedback-box .quote { width: 70%;}
+    .feedback .f-two { 
+        padding: 0 20px;
+        text-align: center;
+    }
+
+
+    .tech {padding: 50px 10px;}
+    .tech .tech-box { width: 90%;}
+
+
+    .keypoint .k-box {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    .keypoint .k-two {width: 100%;}
+
+
+
+    footer .f-box {
+        width: 100%;
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width:900px) {
+
+    .information .box {
+        width: 90%;
+    }
+    
+    .w-box {
+        width: 50%;
+        text-align: center;
+    }
+
+    /* .heading {justify-content: center;} */
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .products {padding: 0 10px;}
+    .card {
+        width: 50%;
+        text-align: center;
+    }
+
+    .news .n-card1, .news .n-card2 {width: auto;}
+
+
+    .tech {padding: 50px 10px;}
+    .tech .tech-box { width: 40%; min-width: 300px;}
+
+
+    .keypoint .k-box { width: 90%; }
+    .keypoint .k-two {width: 100%;}
+}
